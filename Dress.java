@@ -3,6 +3,13 @@ public class Dress extends Clothing {
     protected String sleeveType;
     protected String bodice;
 
+    public Dress(String c, String m, String b, String l, String s, String bo) {
+        super(c, m, b);
+        length = l;
+        sleeveType = s;
+        bodice = bo;
+    }
+
 
     @Override
     public String toString() {
