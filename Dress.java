@@ -1,4 +1,4 @@
-public class Dress {
+public class Dress extends Clothing {
     protected String length;
     protected String sleeveType;
     protected String bodice;
