@@ -23,6 +23,6 @@ public class Shirt extends Clothing{
     @Override
 
     public String toString() {
-        return "This is a beautiful " + isItFormal() + " shirt, with a beautiful " + color + " color, made of a beautiful " + material + " material. With a beautiful pattern of " + pattern + " and a size of " + size + ", this piece is given to us by " + brand + "."; 
+        return "This is a " + giveAdj() + " " + isItFormal() + " shirt, with a " + giveAdj() + " " + color + " color, made of a " + giveAdj() + " " + material + " material. With a " + giveAdj() + " pattern of " + pattern + " and a size of " + size + ", this piece is graciously given to us by " + brand + "."; 
     }
 }

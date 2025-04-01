@@ -10,6 +10,6 @@ public class Clothing {
     }
 
     public String toString() {
-        return "This is a beautiful piece of clothing, with a " + color + " color, made of a " + material + " material. This piece is graciously given to us by " + brand + ".";
+        return "This is a " + giveAdj() + " piece of clothing, with a " + color + " color, made of a " + material + " material. This piece is graciously given to us by " + brand + ".";
     }
 }

@@ -11,6 +11,8 @@ public class Options {
     public String[] bodices = {"princess", "asymmetrical", "strapless", "tubeless", ""};
     public String[] shoeTypes = {"loafers", "sneakers", "heels", "sandals", "flats", "flip flops", "platforms", "boots", "stilettos", "wedges"};
     public boolean[] formalOrNot = {true, false};
+    public String[] jacketStyles = {"zip up", "leather", "furcoat", "trenchcoat", "hoodie", "bomber", "varsity", "parka"};
+    public boolean[] hoodieOrNot = {true, false};
 
 
     public String giveColor() {
@@ -47,6 +49,11 @@ public class Options {
         int index = (int) (Math.random() * adj.length);
         return adj[index];
     }
+
+    public String giveDressLength() {
+        int index = (int) (Math.random() * sleeveTypes.length);
+        return dressLengths[index];
+    }
     
     public String giveSleeveType() {
         int index = (int) (Math.random() * sleeveTypes.length);
@@ -66,6 +73,16 @@ public class Options {
     public boolean giveIsFormal() {
         int index = (int) (Math.random() * formalOrNot.length);
         return formalOrNot[index];
+    }
+
+    public boolean giveJacketStyle() {
+        int index = (int) (Math.random() * jacketStyles.length);
+        return jacketStyles[index];
+    }
+
+    public boolean giveIsHoodie() {
+        int index = (int) (Math.random() * hoodieOrNot.length);
+        return hoodieOrNot[index];
     }
 }
 
