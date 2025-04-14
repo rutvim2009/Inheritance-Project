@@ -23,6 +23,6 @@ public class Shirt extends Clothing{
     @Override
 
     public String toString() {
-        return "This is a " + giveAdj() + " " + isItFormal() + " shirt, with a " + giveAdj() + " " + color + " color, made of a " + giveAdj() + " " + material + " material. With a " + giveAdj() + " pattern of " + pattern + " and a size of " + size + ", this piece is graciously given to us by " + brand + "."; 
+        return "This is a " + Options.giveAdj() + " " + isItFormal() + " shirt, with a " + Options.giveAdj() + " " + color + " color, made of a " + Options.giveAdj() + " " + material + " material. With a " + Options.giveAdj() + " pattern of " + pattern + " and a size of " + size + ", this piece is graciously given to us by " + brand + "."; 
     }
 }
