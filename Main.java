@@ -15,10 +15,67 @@ public class Main {
 
         while (isPassing) {
             Model p1 = new Model();
-            Model p2 = new Model();
+            Model p2 = new Model(true);
             Model p3 = new Model();
 
-            
+            List<Integer> list = Arrays.asList(1, 2, 3);
+            Collections.shuffle(list);
+
+
+            System.out.println("Model 1:");
+            p1.giveModelInfo();
+            System.out.println("Model 2:");
+            p2.giveModelInfo();
+            System.out.println("Model 3:");
+            p3.giveModelInfo();
+
+            System.out.println("Rank the models from least impressive to most impressive, based on the audience's vote! Use the numbers 1, 2, and 3 separated by commas.");
+            Scanner input = new Scanner(System.in);
+            int scoreThisRound = getJudgeScore(input, list);
+            numPoints += scoreThisRound;
+            totalPoints += 3;
+
+            System.out.println("This is how many you got right this round: " + scoreThisRound);
+
+            if ((double) numPoints/totalPoints < 0.5) {
+                System.out.println("We regret to inform you that the audience is not pleased with your rankings. As such, you have been dismissed from the game. Try again next time!");
+                isPassing = false;
+            }
+            else {
+                System.out.println("You're doing great! Your ranking accuracy is: " + (double) numPoints/totalPoints + ". On to the next round!");
+            }
+                      
         }
     }
+
+    
+    public static int getJudgeScore(Scanner input, List<Integer> answer) {
+        int score = 0;
+        
+        String line = input.nextLine(); 
+        String[] parts = line.split(",");
+        
+        if (parts.length != 3) {
+            System.out.println("Invalid input. Please enter three numbers separated by commas (e.g., 1,2,3).");
+            return 0;
+        }
+        
+        for (int i = 0; i < 3; i++) {
+            try {
+                int judgeRank = Integer.parseInt(parts[i].trim());
+                if (judgeRank == answer.get(i)) {
+                    score++;
+                }
+            } catch (NumberFormatException e) {
+                    
+                System.out.println("Invalid number format: " + parts[i]);
+                    
+                return 0;
+            }
+        }
+        
+        return score;
+    }
+        
+    
 }

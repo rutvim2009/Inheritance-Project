@@ -15,7 +15,7 @@ public class Options {
     public static boolean[] hoodieOrNot = {true, false};
 
     public static String[] outfits = {"Dress", "Shirt"};
-    public static String[] 
+    //public static String[] 
 
     public static String giveColor() {
         int index = (int) (Math.random() * colors.length);
@@ -53,7 +53,7 @@ public class Options {
     }
 
     public static String giveDressLength() {
-        int index = (int) (Math.random() * sleeveTypes.length);
+        int index = (int) (Math.random() * dressLengths.length);
         return dressLengths[index];
     }
     
