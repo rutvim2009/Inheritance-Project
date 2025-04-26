@@ -37,7 +37,7 @@ public class Main {
 
             System.out.println("This is how many you got right this round: " + scoreThisRound);
 
-            if ((double) numPoints/totalPoints < 0.5) {
+            if ((double) numPoints/totalPoints < 0.3) {
                 System.out.println("We regret to inform you that the audience is not pleased with your rankings. As such, you have been dismissed from the game. Try again next time!");
                 isPassing = false;
             }
