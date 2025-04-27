@@ -1,11 +1,13 @@
 public class Footwear extends Clothing {
-    protected double size;
+    protected String size;
     protected String type;
+    public double price;
 
-    public Footwear(String c, String m, String b, double s, String t) {
+    public Footwear(String c, String m, String b, String s, String t) {
         super(c, m, b);
         size = s;
         type = t;
+        price = Options.materials.get(m) + Options.brands.get(b) + Options.shoeSizes.get(s) + Options.shoeTypes.get(t);
     }
 
     public String toString() {

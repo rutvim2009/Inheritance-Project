@@ -2,12 +2,14 @@ public class Shirt extends Clothing{
     protected String size;
     protected boolean isFormal;
     protected String pattern;
+    public double price;
 
     public Shirt(String c, String m, String b, String s, boolean f, String p) {
         super(c, m, b);
         size = s;
         isFormal = f;
         pattern = p;
+        price = Options.materials.get(m) + Options.brands.get(b) + Options.clothingSizes.get(s);
     }
 
     public String isItFormal() {
