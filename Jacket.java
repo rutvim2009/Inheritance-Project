@@ -2,12 +2,14 @@ public class Jacket extends Clothing {
     protected String style;
     protected boolean hasHoodie;
     protected String innerMaterial;
+    public double price;
 
     public Jacket(String c, String m, String b, String s, boolean hh, String im) {
         super(c, m, b);
         style = s;
         hasHoodie = hh;
         innerMaterial = im;
+        price = Options.materials.get(m) + Options.brands.get(b) + Options.jacketStyles.get(s) + Options.materials.get(im);
     }
 
     @Override

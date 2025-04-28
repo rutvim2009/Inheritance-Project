@@ -2,12 +2,14 @@ public class Dress extends Clothing {
     protected String length;
     protected String sleeveType;
     protected String bodice;
+    public double price;
 
     public Dress(String c, String m, String b, String l, String s, String bo) {
         super(c, m, b);
         length = l;
         sleeveType = s;
         bodice = bo;
+        price = Options.materials.get(m) + Options.brands.get(b) + Options.dressLengths.get(l) + Options.sleeveTypes.get(s) + Options.bodices.get(bo);
     }
 
     @Override

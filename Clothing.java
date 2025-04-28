@@ -2,6 +2,7 @@ public class Clothing {
     protected String color;
     protected String material;
     protected String brand;
+    public double price;
 
     public Clothing(String c, String m, String b) {
         color = c;
