@@ -18,11 +18,16 @@ public class Main {
             Model p2 = new Model(true);
             Model p3 = new Model();
 
-            List<Double> prices = Arrays.asList(p1.outfitPrice, p2.outfitPrice, p3.outfitPrice);
+            List<Double> prices = new ArrayList<Double>();
+            prices.add(p1.outfitPrice);
+            prices.add(p2.outfitPrice);
+            prices.add(p3.outfitPrice);
+            Collections.sort(prices); //sorts prices from least to most expensive, but we don't know which price corresponds to which model
             
-
+            System.out.println(prices);
+            
             List<Integer> outfitPriceRanks = makeCorrectRanking(prices, p1, p2, p3); //compares the prices of all three models and correctly ranks them from least to most expensive
-
+            System.out.println(outfitPriceRanks);
 
             System.out.println("Model 1:");
             p1.giveModelInfo();
@@ -52,17 +57,17 @@ public class Main {
 
     
     public static List<Integer> makeCorrectRanking(List<Double> list, Model p1, Model p2, Model p3) {
-        List<Integer> result = new ArrayList<Integer>(3);
+        List<Integer> result = new ArrayList<>(3);
         Collections.sort(list); //sorts prices from least to most expensive, but we don't know which price corresponds to which model
 
         for (int i = 0; i < 3; i++) {
             if (list.get(i) == p1.outfitPrice) {
-                result.set(i, 1);
+                result.add(i, 1);
             }
             else if (list.get(i) == p2.outfitPrice) {
-                result.set(i, 2);
+                result.add(i, 2);
             }
-            else {result.set(i, 3);}
+            else {result.add(i, 3);}
         }
 
         return result; 
