@@ -13,9 +13,8 @@ public class Options {
     public static boolean[] formalOrNot = {true, false};
     public static String[] jacketStyles = {"zip up", "leather", "furcoat", "trenchcoat", "hoodie", "bomber", "varsity", "parka"};
     public static boolean[] hoodieOrNot = {true, false};
-
+    
     public static String[] outfits = {"Dress", "Shirt"};
-    public static String[] 
 
     public static String giveColor() {
         int index = (int) (Math.random() * colors.length);
