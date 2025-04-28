@@ -5,14 +5,10 @@ public class Main {
     public static void main (String[] args) {
 
 
-<<<<<<< HEAD
-        System.out.println("Hello, judge! Welcome to Dress to Impress! We have several outfits lined up for you. Every round, we will give you three outfits to rank. If your ranking matches the ranking of the audience, you will get points! But, be warned, if your rankings do not satisfy the likings of the audience, we will kick you out of the judging panel. Let's proceed!");
-=======
         System.out.println("Hello, judge! Welcome to Dress to Impress! We have several outfits lined up for you. Every round, we will give you three outfits to rank based on price. If your ranking correctly ranks the prices of the outfits, the manager will reward you points! But, be warned, if your rankings do not satisfy the likings of the manager, he will kick you out of the judging panel. Let's proceed!");
 
 
 
->>>>>>> a2eb51fb3f466941addeb4e8a1fa1c9891c63da4
         boolean isPassing = true;
         int numPoints = 0;
         int totalPoints = 0;

@@ -2,31 +2,12 @@ import java.util.*;
 //import java.io.*;
 
 public class Options {
-<<<<<<< HEAD
-    public static String[] colors = {"red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "white", "black", "gray", "scarlet", "azure", "teal", "amber", "violet", "cyan"};
-    public static String[] materials = {"cotton", "wool", "linen", "silk", "denim", "satin", "leather", "polyester"};
-    public static String[] brands = {"Gucci", "Louis Vuitton", "Prada", "Nike", "Adidas", "H&M", "Zara"};
-    public static String[] clothingSizes = {"XS", "S", "M", "L", "XL", "XXL", "XXXL"};
-    public static double[] shoeSizes = {5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14};
-    public static String[] patterns = {"stripes", "plaid", "polka dots", "camo", "floral", "tie-dye", "lace", "chevron", "leopard print", "zebra print"};
-    public static String[] adj = {"formal", "elegant", "sophisticated", "comfortable", "simple", "casual", "fashional", "stylish", "plain", "beautiful", "vintage"};
-    public static String[] dressLengths = {"mini", "midi", "maxi"};
-    public static String[] sleeveTypes = {"bishop", "bell", "raglan", "poet", "puffed", "kimono", "circular", "peasant", "marie", "layered", "petal", "lantern", "french", "puffed"};
-    public static String[] bodices = {"princess", "asymmetrical", "strapless", "tubeless", ""};
-    public static String[] shoeTypes = {"loafers", "sneakers", "heels", "sandals", "flats", "flip flops", "platforms", "boots", "stilettos", "wedges"};
-    public static boolean[] formalOrNot = {true, false};
-    public static String[] jacketStyles = {"zip up", "leather", "furcoat", "trenchcoat", "hoodie", "bomber", "varsity", "parka"};
-    public static boolean[] hoodieOrNot = {true, false};
-    
-    public static String[] outfits = {"Dress", "Shirt"};
-=======
  public static String[] colors = {"red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "white", "black", "gray", "scarlet", "azure", "teal", "amber", "violet", "cyan"};
 
  public static Map<String, Double> materials = Map.of(
  "cotton", 10.00, "wool", 25.00, "linen", 15.00, "silk", 35.00,
  "denim", 15.00, "satin", 7.50, "leather", 15.00, "polyester", 4.00, "nylon", 7.50
  );
->>>>>>> a2eb51fb3f466941addeb4e8a1fa1c9891c63da4
 
  public static Map<String, Double> brands = Map.of(
  "Gucci", 300.0, "Louis Vuitton", 350.0, "Prada", 320.0,
