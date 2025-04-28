@@ -1,5 +1,5 @@
 import java.util.*;
-//import java.io.*;
+import java.io.*;
 
 public class Main {
     public static void main (String[] args) {
@@ -10,7 +10,7 @@ public class Main {
 
 
         boolean isPassing = true;
-        int numPoints = 0;
+        int numUserPoints = 0;
         int totalPoints = 0;
 
         while (isPassing) {
@@ -20,6 +20,8 @@ public class Main {
 
             List<Double> prices = Arrays.asList(p1.outfitPrice, p2.outfitPrice, p3.outfitPrice);
             
+
+            List<Integer> outfitPriceRanks = makeCorrectRanking(prices, p1, p2, p3); //compares the prices of all three models and correctly ranks them from least to most expensive
 
 
             System.out.println("Model 1:");
@@ -31,50 +33,50 @@ public class Main {
 
             System.out.println("Rank the models from least expensive to most expensive! Use the numbers 1, 2, and 3 separated by commas.");
             Scanner input = new Scanner(System.in);
-            int scoreThisRound = getJudgeScore(input, );
-            numPoints += scoreThisRound;
+            int scoreThisRound = getJudgeScore(input, outfitPriceRanks);
+            numUserPoints += scoreThisRound;
             totalPoints += 3;
 
             System.out.println("This is how many you got right this round: " + scoreThisRound);
 
-            if ((double) numPoints/totalPoints < 0.3) {
+            if ((double) numUserPoints/totalPoints < 0.3) {
                 System.out.println("We regret to inform you that the manager is not pleased with your rankings. As such, you have been dismissed from the game. Try again next time!");
                 isPassing = false;
             }
             else {
-                System.out.println("You're doing great! Your ranking accuracy is: " + (double) numPoints/totalPoints + ". On to the next round!");
+                System.out.println("You're doing great! Your ranking accuracy is: " + (double) numUserPoints/totalPoints + ". On to the next round!");
             }
                       
         }
     }
 
     
-    public static int getJudgeScore(Scanner input, List<Integer> answer) {
-        int score = 0;
-        
-        String line = input.nextLine(); 
-        String[] parts = line.split(",");
-        
-        if (parts.length != 3) {
-            System.out.println("Invalid input. Please enter three numbers separated by commas (e.g., 1,2,3).");
-            return 0;
-        }
-        
+    public static List<Integer> makeCorrectRanking(List<Double> list, Model p1, Model p2, Model p3) {
+        List<Integer> result = new ArrayList<Integer>(3);
+        Collections.sort(list); //sorts prices from least to most expensive, but we don't know which price corresponds to which model
+
         for (int i = 0; i < 3; i++) {
-            try {
-                int judgeRank = Integer.parseInt(parts[i].trim());
-                if (judgeRank == answer.get(i)) {
-                    score++;
-                }
-            } catch (NumberFormatException e) {
-                    
-                System.out.println("Invalid number format: " + parts[i]);
-                    
-                return 0;
+            if (list.get(i) == p1.outfitPrice) {
+                result.set(i, 1);
+            }
+            else if (list.get(i) == p2.outfitPrice) {
+                result.set(i, 2);
+            }
+            else {result.set(i, 3);}
+        }
+
+        return result; 
+    }
+
+    public static int getJudgeScore(Scanner input, List<Integer> rightAnswers) {
+        int result = 0;
+        for (int i = 0; i < 2; i++) {
+            if (input.nextInt() == rightAnswers.get(i)) {
+                result++;
             }
         }
-        
-        return score;
+
+        return result;
     }
         
     
