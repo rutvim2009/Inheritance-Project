@@ -5,7 +5,7 @@ public class Bottoms extends Clothing {
     public Bottoms(String c, String m, String b, String s) {
         super(c, m, b);
         size = s;
-        price = Options.materials.get(m) + Options.brands.get(b) + Options.clothingSizes.get(s);
+        price = Options.materials.get(String.valueOf(m)) + Options.brands.get(String.valueOf(b)) + Options.clothingSizes.get(String.valueOf(s));
     }
     
     @Override

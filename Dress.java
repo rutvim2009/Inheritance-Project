@@ -9,7 +9,7 @@ public class Dress extends Clothing {
         length = l;
         sleeveType = s;
         bodice = bo;
-        price = Options.materials.get(m) + Options.brands.get(b) + Options.dressLengths.get(l) + Options.sleeveTypes.get(s) + Options.bodices.get(bo);
+        price = Options.materials.get(String.valueOf(m)) + Options.brands.get(String.valueOf(b)) + Options.dressLengths.get(String.valueOf(l)) + Options.sleeveTypes.get(String.valueOf(s)) + Options.bodices.get(String.valueOf(bo));
     }
 
     @Override

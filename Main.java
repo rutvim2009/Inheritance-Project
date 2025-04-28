@@ -26,15 +26,10 @@ public class Main {
             
             System.out.println(prices);
             
+            
             List<Integer> outfitPriceRanks = makeCorrectRanking(prices, p1, p2, p3); //compares the prices of all three models and correctly ranks them from least to most expensive
             System.out.println(outfitPriceRanks);
 
-            System.out.println("Model 1:");
-            p1.giveModelInfo();
-            System.out.println("Model 2:");
-            p2.giveModelInfo();
-            System.out.println("Model 3:");
-            p3.giveModelInfo();
 
             System.out.println("Rank the models from least expensive to most expensive! Use the numbers 1, 2, and 3 separated by commas.");
             Scanner input = new Scanner(System.in);

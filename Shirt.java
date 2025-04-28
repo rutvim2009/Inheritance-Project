@@ -9,7 +9,7 @@ public class Shirt extends Clothing{
         size = s;
         isFormal = f;
         pattern = p;
-        price = Options.materials.get(m) + Options.brands.get(b) + Options.clothingSizes.get(s);
+        price = Options.materials.get(String.valueOf(m)) + Options.brands.get(String.valueOf(b)) + Options.clothingSizes.get(String.valueOf(s));
     }
 
     public String isItFormal() {

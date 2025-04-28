@@ -9,7 +9,7 @@ public class Jacket extends Clothing {
         style = s;
         hasHoodie = hh;
         innerMaterial = im;
-        price = Options.materials.get(m) + Options.brands.get(b) + Options.jacketStyles.get(s) + Options.materials.get(im);
+        price = Options.materials.get(String.valueOf(m)) + Options.brands.get(String.valueOf(b)) + Options.jacketStyles.get(String.valueOf(s)) + Options.materials.get(String.valueOf(im));
     }
 
     @Override

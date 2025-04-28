@@ -7,7 +7,7 @@ public class Footwear extends Clothing {
         super(c, m, b);
         size = s;
         type = t;
-        price = Options.materials.get(m) + Options.brands.get(b) + Options.shoeSizes.get(s) + Options.shoeTypes.get(t);
+        price = Options.materials.get(String.valueOf(m)) + Options.brands.get(String.valueOf(b)) + Options.shoeSizes.get(String.valueOf(s)) + Options.shoeTypes.get(String.valueOf(t));
     }
 
     public String toString() {
