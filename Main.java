@@ -23,16 +23,19 @@ public class Main {
             prices.add(p2.outfitPrice);
             prices.add(p3.outfitPrice);
             Collections.sort(prices); //sorts prices from least to most expensive, but we don't know which price corresponds to which model
-            
-            System.out.println(prices);
-            System.out.println(Options.materials.get(String.valueOf(Options.giveMaterial().getKey())));
-            
-
+        
             List<Integer> outfitPriceRanks = makeCorrectRanking(prices, p1, p2, p3); //compares the prices of all three models and correctly ranks them from least to most expensive
             System.out.println(outfitPriceRanks);
 
+            //System.out.println("Model 1:");
+            //p1.giveModelInfo();
+            //System.out.println("Model 2:");
+            //p1.giveModelInfo();
+            //System.out.println("Model 3:");
+            //p1.giveModelInfo();
 
-            System.out.println("Rank the models from least expensive to most expensive! Use the numbers 1, 2, and 3 separated by commas.");
+
+            System.out.println("Rank the models from least expensive to most expensive! Use the numbers 1, 2, and 3.");
             Scanner input = new Scanner(System.in);
             int scoreThisRound = getJudgeScore(input, outfitPriceRanks);
             numUserPoints += scoreThisRound;
@@ -71,12 +74,20 @@ public class Main {
 
     public static int getJudgeScore(Scanner input, List<Integer> rightAnswers) {
         int result = 0;
-        for (int i = 0; i < 2; i++) {
-            if (input.nextInt() == rightAnswers.get(i)) {
+        int index = 0;
+        String parsing = input.nextLine();
+        Scanner parsed = new Scanner(parsing);
+           
+        while (parsed.hasNextInt() && index < rightAnswers.size()) {
+            int answer = parsed.nextInt(); // Read once
+            if (answer == rightAnswers.get(index)) {
                 result++;
             }
+            
+            index++; // Always increment index to move to the next correct answer
         }
-
+           
+        parsed.close();
         return result;
     }
         
