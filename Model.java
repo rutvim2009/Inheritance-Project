@@ -16,7 +16,7 @@ public class Model {
         piecesWorn.add(footwear);
         piecesWorn.add(jacket);
 
-        outfitPrice = top.price + bottoms.price + footwear.price + jacket.price;
+        outfitPrice = top.getPrice() + bottoms.getPrice() + footwear.getPrice() + jacket.getPrice();
     }
 
     public Model(boolean isDress) {
@@ -30,7 +30,7 @@ public class Model {
         piecesWorn.add(footwear);
         piecesWorn.add(jacket);
 
-        outfitPrice = dress.price + bottoms.price + footwear.price + jacket.price;
+        outfitPrice = dress.getPrice() + bottoms.getPrice() + footwear.getPrice() + jacket.getPrice();
     }
 
     public void giveModelInfo() {

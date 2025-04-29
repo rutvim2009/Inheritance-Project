@@ -2,7 +2,6 @@ public class Shirt extends Clothing{
     protected String size;
     protected boolean isFormal;
     protected String pattern;
-    public double price;
 
     public Shirt(String c, String m, String b, String s, boolean f, String p) {
         super(c, m, b);
@@ -21,6 +20,7 @@ public class Shirt extends Clothing{
             return "casual";
         }
     }
+
 
     @Override
 

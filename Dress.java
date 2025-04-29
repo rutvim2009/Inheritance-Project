@@ -2,7 +2,6 @@ public class Dress extends Clothing {
     protected String length;
     protected String sleeveType;
     protected String bodice;
-    public double price;
 
     public Dress(String c, String m, String b, String l, String s, String bo) {
         super(c, m, b);

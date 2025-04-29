@@ -1,6 +1,5 @@
 public class Bottoms extends Clothing {
     protected String size;
-    public double price;
     
     public Bottoms(String c, String m, String b, String s) {
         super(c, m, b);

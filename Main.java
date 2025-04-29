@@ -25,8 +25,9 @@ public class Main {
             Collections.sort(prices); //sorts prices from least to most expensive, but we don't know which price corresponds to which model
             
             System.out.println(prices);
+            System.out.println(Options.materials.get(String.valueOf(Options.giveMaterial().getKey())));
             
-            
+
             List<Integer> outfitPriceRanks = makeCorrectRanking(prices, p1, p2, p3); //compares the prices of all three models and correctly ranks them from least to most expensive
             System.out.println(outfitPriceRanks);
 

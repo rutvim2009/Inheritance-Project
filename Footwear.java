@@ -1,7 +1,6 @@
 public class Footwear extends Clothing {
     protected String size;
     protected String type;
-    public double price;
 
     public Footwear(String c, String m, String b, String s, String t) {
         super(c, m, b);
