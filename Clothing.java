@@ -11,7 +11,7 @@ public class Clothing {
     }
 
     public String toString() {
-        return "This is a " + Options.giveAdj() + " piece of clothing, with a " + color + " color, made of a " + material + " material. This piece is graciously given to us by " + brand + ".";
+        return "Clothing: A " + Options.giveAdj() + " piece of clothing, with a " + color + " color, made of a " + material + " material. This piece is graciously given to us by " + brand + ".";
     }
 
     public double getPrice() {

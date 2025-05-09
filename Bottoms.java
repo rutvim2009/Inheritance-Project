@@ -9,6 +9,6 @@ public class Bottoms extends Clothing {
     
     @Override
     public String toString() {
-        return "This is a " + Options.giveAdj() + size + "sized bottom made of " + color + material + ". This was given to us by " + brand; 
+        return "Pants: A " + Options.giveAdj() + " " + size + " sized bottoms made of " + color + " " + material + ". Given to us by " + brand; 
     }   
 }

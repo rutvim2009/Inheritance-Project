@@ -50,7 +50,7 @@ public class Options {
  );
 
  public static String[] patterns = {"stripes", "plaid", "polka dots", "camo", "floral", "tie-dye", "lace", "chevron", "leopard print", "zebra print"};
- public static String[] adj = {"formal", "elegant", "sophisticated", "comfortable", "simple", "casual", "fashional", "stylish", "plain", "beautiful", "vintage"};
+ public static String[] adj = {"formal", "elegant", "sophisticated", "comfortable", "simple", "casual", "fashionable", "stylish", "plain", "beautiful", "vintage"};
  public static boolean[] formalOrNot = {true, false};
  public static boolean[] hoodieOrNot = {true, false};
 

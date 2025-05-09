@@ -10,6 +10,6 @@ public class Footwear extends Clothing {
     }
 
     public String toString() {
-        return "This is a " + Options.giveAdj() + " footwear set, of color " + color + " and made of a " + Options.giveAdj() + " " + material + " material. " + brand + " has graciously given us this item. With a size of " + size + " and of type " + type + ", we know that this item is one for the history books!";
+        return "Footwear: A " + Options.giveAdj() + " footwear set, of color " + color + " and made of a " + Options.giveAdj() + " " + material + " material. " + brand + " has given us this item. Size of " + size + " and of type " + type;
     }
 }

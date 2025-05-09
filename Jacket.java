@@ -13,7 +13,7 @@ public class Jacket extends Clothing {
 
     @Override
     public String toString() {
-        return "This is a " + Options.giveAdj() + " " + color + ", " + style + " jacket. This was given to us by " + brand + " and is made of " + material + "on the outside and " + innerMaterial + " on the inside."; 
+        return "Jacket: A " + Options.giveAdj() + " " + color + ", " + style + " jacket. This was given to us by " + brand + " and is made of " + material + " on the outside and " + innerMaterial + " on the inside."; 
 
     }
 }

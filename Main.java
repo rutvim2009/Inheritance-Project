@@ -1,5 +1,5 @@
 import java.util.*;
-import java.io.*;
+//import java.io.*;
 
 public class Main {
     public static void main (String[] args) {
@@ -12,6 +12,7 @@ public class Main {
         boolean isPassing = true;
         int numUserPoints = 0;
         int totalPoints = 0;
+        int round = 1;
 
         while (isPassing) {
             Model p1 = new Model();
@@ -25,31 +26,48 @@ public class Main {
             Collections.sort(prices); //sorts prices from least to most expensive, but we don't know which price corresponds to which model
         
             List<Integer> outfitPriceRanks = makeCorrectRanking(prices, p1, p2, p3); //compares the prices of all three models and correctly ranks them from least to most expensive
-            System.out.println(outfitPriceRanks);
+            //System.out.println(outfitPriceRanks);
 
-            //System.out.println("Model 1:");
-            //p1.giveModelInfo();
-            //System.out.println("Model 2:");
-            //p1.giveModelInfo();
-            //System.out.println("Model 3:");
-            //p1.giveModelInfo();
+            pause(10000);
+            System.out.println("Round " + round + ":");
+            System.out.println();
 
+            pause(3000);
+            System.out.println("Model 1:");
+            p1.giveModelInfo();
+            System.out.println();
 
-            System.out.println("Rank the models from least expensive to most expensive! Use the numbers 1, 2, and 3.");
+            pause(20000);
+            System.out.println("Model 2:");
+            p1.giveModelInfo();
+            System.out.println();
+
+            pause(20000);
+            System.out.println("Model 3:");
+            p1.giveModelInfo();
+            System.out.println();
+
+            pause(20000);
+            System.out.println("Rank the models from least expensive to most expensive! Use the numbers 1, 2, and 3, separated by spaces.");
             Scanner input = new Scanner(System.in);
             int scoreThisRound = getJudgeScore(input, outfitPriceRanks);
             numUserPoints += scoreThisRound;
             totalPoints += 3;
 
+            System.out.println();
             System.out.println("This is how many you got right this round: " + scoreThisRound);
+            System.out.println();
 
-            if ((double) numUserPoints/totalPoints < 0.3) {
+            if (round > 3 && (double) numUserPoints/totalPoints < 0.3) {
                 System.out.println("We regret to inform you that the manager is not pleased with your rankings. As such, you have been dismissed from the game. Try again next time!");
                 isPassing = false;
             }
             else {
-                System.out.println("You're doing great! Your ranking accuracy is: " + (double) numUserPoints/totalPoints + ". On to the next round!");
+                System.out.println("You're doing great for now! Your ranking accuracy is: " + (double) numUserPoints/totalPoints + ". On to the next round!");
             }
+
+            round++;
+            System.out.println();
                       
         }
     }
@@ -86,10 +104,19 @@ public class Main {
             
             index++; // Always increment index to move to the next correct answer
         }
-           
+        
         parsed.close();
         return result;
     }
-        
+
+    public static void pause(int time) {
+        try {
+            Thread.sleep(time); 
+        } 
+        catch (InterruptedException e) {
+            e.printStackTrace();
+            Thread.currentThread().interrupt(); 
+        }
+    }        
     
 }
