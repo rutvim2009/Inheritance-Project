@@ -39,12 +39,12 @@ public class Main {
 
             pause(20000);
             System.out.println("Model 2:");
-            p1.giveModelInfo();
+            p2.giveModelInfo();
             System.out.println();
 
             pause(20000);
             System.out.println("Model 3:");
-            p1.giveModelInfo();
+            p3.giveModelInfo();
             System.out.println();
 
             pause(20000);

@@ -13,6 +13,6 @@ public class Dress extends Clothing {
 
     @Override
     public String toString() {
-        return "Dress: A " + Options.giveAdj() + " dress, with a " + color + " color, made of a " + material + " material. Having a " + length + " length, " + Options.giveAdj() + " " + sleeveType + " sleeve style, and a " + Options.giveAdj() + " " + bodice + "bodice style, this piece is given to us by " + brand + "."; 
+        return "Dress: A " + Options.giveAdj() + " dress, with a " + color + " color, made of a " + material + " material. Having a " + length + " length, " + Options.giveAdj() + " " + sleeveType + " sleeve style, and a " + Options.giveAdj() + " " + bodice + " bodice style, this piece is given to us by " + brand + "."; 
     }
 }
